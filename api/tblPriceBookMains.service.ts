@@ -268,6 +268,11 @@ export class TblPriceBookMainsService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
+        
+        this.basePath = 'http://localhost:65049';
+        console.log('basePath: ', this.basePath);
+
+
         return this.httpClient.post<TblPriceBookMain>(`${this.basePath}/api/TblPriceBookMains`,
             body,
             {
